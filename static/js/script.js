@@ -23,10 +23,10 @@ function handleClick(event) {
         console.log("Inserisci un numero valido")
     } else {
         if (numeroInserito > numeroCasuale) {
-            console.log("Il numero '" + numeroInserito + "' è troppo grande")
+            elem.innerHTML = "Il numero" + numeroInserito + "è troppo grande. Hai ancora a disposizione <strong>" + tentativi + "</strong>tentativi"
             tentativi += 1
         } else if (numeroInserito < numeroCasuale) {
-            console.log("Il numero '" + numeroInserito + "' è troppo piccolo")
+            elem.innerHTML = "Il numero " + numeroInserito + " è troppo piccolo. Hai ancora a disposizione <strong>" + tentativi + "</strong>tentativi"
             tentativi += 1
         } else if (numeroInserito === numeroCasuale) {
             console.log("Bravo, hai vinto!")
@@ -42,6 +42,7 @@ function handleClick(event) {
     }
 }
 
+let elem = document.querySelector("#message")
 let tentativi = 0
 let numeroCasuale = getRandomInt()
 let numeroInserito
