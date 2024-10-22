@@ -6,14 +6,14 @@
     <title>INDOVINA IL NUMERO</title>
     <link rel="stylesheet" href="static/css/index.css">
 </head>
-<body>
+<body class="greenBg">
 
     <header>
         <h1 class="title">INDOVINA IL NUMERO</h1>
     </header>
     <div class="rules">
         <p class="text">
-            <ol>
+            <ol class="inter">
                 <li>Il computer sceglierà segretamente un numero intero casuale tra 1 e 100. </li>
                 <li> Il tuo obiettivo è indovinare questo numero segreto nel minor numero di tentativi possibile.</li>
                 <li> Ad ogni tentativo, inserisci un numero e il computer ti darà un indizio: </li>
@@ -21,7 +21,7 @@
                 <ul><li>Se il tuo numero è troppo alto, ti dirà "Troppo alto, prova un numero più basso!"</li></ul>
                 <ul><li>Se indovini il numero esatto, vincerai la partita!</li></ul>
             </ol>
-            <ol>
+            <ol class="inter">
                 <li>Continua a fare tentativi finché non indovini il numero magico.</li>
                 <li> Alla fine del gioco, ti verrà mostrato il numero di tentativi che hai impiegato per indovinare.</li>
                 <li>Sfida te stesso a indovinare il numero con il minor numero di tentativi possibile!</li>
@@ -29,17 +29,17 @@
         </p>
     </div>
     
-    <p>
+    <p class="inter">
         Inserisci il numero magico
     </p>
     <div>
-        <form action="" method="get">
+        <form class="inter" action="" method="get">
             <input type="number" name="guess" id="guess" value=""> <br>
-            <input type="button" name="btn" id="guessBtn" value="Indovina">
+            <input class="greenBtnBg" type="button" name="btn" id="guessBtn" value="Indovina">
         </form>
     </div>
 
-    <div id="message">
+    <div class="inter" id="message">
        
     </div>
 
