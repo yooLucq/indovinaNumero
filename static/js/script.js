@@ -23,11 +23,11 @@ function handleClick(event) {
         console.log("Inserisci un numero valido")
     } else {
         if (numeroInserito > numeroCasuale) {
-            elem.innerHTML = "Il numero" + numeroInserito + "è troppo grande. Hai ancora a disposizione <strong>" + tentativi + "</strong>tentativi"
-            tentativi += 1
+            elem.innerHTML = "Il numero" + numeroInserito + "è troppo grande. Hai ancora a disposizione <strong>" + tentativi  +  "</strong>tentativi"
+            tentativi -= 1
         } else if (numeroInserito < numeroCasuale) {
-            elem.innerHTML = "Il numero " + numeroInserito + " è troppo piccolo. Hai ancora a disposizione <strong>" + tentativi + "</strong>tentativi"
-            tentativi += 1
+            elem.innerHTML = "Il numero " + numeroInserito + " è troppo piccolo. Hai ancora a disposizione <strong>" + tentativi  +  "</strong>tentativi"
+            tentativi -= 1
         } else if (numeroInserito === numeroCasuale) {
             console.log("Bravo, hai vinto!")
             indovinato = true
@@ -35,7 +35,7 @@ function handleClick(event) {
             document.querySelector("#guessBtn").disabled = true;
         }
     }
-    if (tentativi === 5 && !indovinato) {
+    if (tentativi === 0 && !indovinato) {
         console.log("Hai esaurito i tentativi, hai perso!")
         document.querySelector("#guess").disabled = true;
         document.querySelector("#guessBtn").disabled = true;
@@ -43,7 +43,7 @@ function handleClick(event) {
 }
 
 let elem = document.querySelector("#message")
-let tentativi = 0
+let tentativi = 5
 let numeroCasuale = getRandomInt()
 let numeroInserito
 let indovinato = false
